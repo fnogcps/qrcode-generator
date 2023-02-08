@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="bg-gray-200" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>QRCode Generator</title>
+</head>
+<body>
+    <input id="dark-mode" type="checkbox" class="toggle toogle-error toggle-lg m-1 absolute top-0 right-0" />
+    <div class="container max-w-lg max-h-full mt-24 pb-4 shadow-2xl backdrop-blur-sm text-center bg-slate-800 dark:bg-gray-100 rounded-lg">
+        <label class="block antialiased p-6 text-4xl font-bold text-white dark:text-slate-800">
+            <svg class="text-center h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd" />
+            </svg>
+            QRCode Generator
+        </label>
+        <form id="qr-form" method="post" class="flex flex-col items-center w-full" autocomplete="off">
+            <input type="text" name="text" id="text" minlength="5" maxlength="255" class="input input-md w-full max-w-xs mt-1 rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" placeholder="Insert a text or link here" autofocus>
+            <button class="btn mt-6 gap-2 w-64 rounded-md p-3 my-6
+            text-sm text-center text-gray-800 bg-gray-100 hover:bg-gray-100
+            font-semibold
+            uppercase transition
+            duration-200 ease-in-out
+            cursor-pointer dark:text-gray-100 dark:bg-slate-700 dark:hover:bg-slate-800"
+            tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+            </svg>
+            Generate
+        </button>
+    </form>
+    <div class="p-4 text-center text-base dark:text-slate-700 text-white font-bold">
+        <p>Made by <a class="dark:text-[#4c85b6] text-[#6dbcff]" href="https://github.com/fnogcps" target="_blank">Felipe Nogueira</a></p>
+    </div>
+</div>
+
+<div id="qr-modal" class="modal" hidden>
+    <div class="modal-box max-w-lg max-h-full relative flex flex-col items-center text-center bg-slate-800 dark:bg-gray-100 rounded-md">
+        <label for="qr-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        <img id="qr-code" class="my-5 rounded-lg" src="#">
+        <a download="qrcode.png" class="btn btn-sm btn-download gap-2 h-8 text-center cursor-pointer text-gray-800 bg-gray-100 hover:bg-gray-100 dark:text-gray-100 dark:bg-slate-700 dark:hover:bg-slate-800 transition duration-100 ease-in-out rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z" />
+                <path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" />
+            </svg>
+            Download
+        </a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/validate.js"></script>
+</body>
+</html>
